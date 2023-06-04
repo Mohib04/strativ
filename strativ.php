@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Strativ Elementor Custom Widgets
- * Description: Elementor custom widgets from Strativ Blog.
- * Plugin URI:  https://essentialwebapps.com/
+ * Description: Elementor custom widgets from Strativ.
+ * Plugin URI:  https://github.com/Mohib04/strativ
  * Version:     1.0.0
  * Author:      Mohibbulla Munshi
  * Author URI:  https://www.linkedin.com/in/mohibbullamunshi/
@@ -26,10 +26,9 @@ function register_strativ_blog_custom_widgets($widgets_manager)
 }
 add_action('elementor/widgets/widgets_registered', 'register_strativ_blog_custom_widgets');
 
-// Bootstrap
+// Enqueue Bootstrap CSS.
 function enqueue_bootstrap()
 {
-    // Enqueue Bootstrap CSS.
     wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
 
     // Enqueue Bootstrap JS and its dependencies (jQuery).
